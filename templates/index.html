@@ -9,7 +9,7 @@
     <h1>My Diary</h1>
 
     <form action="/add_entry" method="POST">
-      <label for="date">Data (YYYY-MM-DD):</label>
+      <label for="date">Date (YYYY-MM-DD):</label>
       <input type="text" id="date" name="date" required><br>
 
       <label for="entry">Diary Entry:</label><br>
@@ -20,7 +20,7 @@
 
     <h2>Diary Entries:</h2>
     <ul>
-      {% for data, entry in entries.items() %}
+      {% for date, entry in entries.items() %}
       <p>{{ date }}: {{ entry }}</p>
       {% endfor %}
     </ul>

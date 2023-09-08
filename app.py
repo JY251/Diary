@@ -15,11 +15,11 @@ def index():
 
 @app.route('/add_entry', methods=['POST'])
 def add_entry():
-  data = request.form['date']
+  date = request.form['date']
   entry = request.form['entry']
   diary_entries[date] = entry
   return render_template('index.html', entries=diary_entries)
 
 if __name__ == '__main__':
-  # app.run(debug=True)
-  app.run(host='0.0.0.0', port=5000)
+  app.run(debug=True)
+  # app.run(host='0.0.0.0', port=5000)
