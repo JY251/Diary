@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentYear = currentDate.getFullYear();
     let currentMonth = currentDate.getMonth();
 
+    // console.log(currentMonth); // DEBUG
+    // console.log(new Date(1990, 8,12)); // DEBUG
+
     const prevMonthBtn = document.getElementById('prev-month');
     const nextMonthBtn = document.getElementById('next-month');
     const currentMonthHeader = document.getElementById('current-month');
@@ -12,13 +15,32 @@ document.addEventListener('DOMContentLoaded', function () {
     renderCalendar(currentYear, currentMonth);
 
     // content
+    prevMonthBtn.addEventListener('click', function () {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar(currentYear, currentMonth);
+    });
+
+    nextMonthBtn.addEventListener('click', function () {
+        currentMonth++;
+        if (currentMonth === 12) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar(currentYear, currentMonth);
+    });
 
     function renderCalendar(year, month) {
         const daysInMonth = new Date(year, month + 1, 0).getDate();
         // console.log(new Date(year, month + 1, 0)); // DEBUG
         // console.log(daysInMonth) // DEBUG
-        const firstDayOfMonth = new Date(year, month, 1).getDate();
-        const lastDayOfMonth = new Date(year, month, daysInMonth).getDate();
+        const firstDayOfMonth = new Date(year, month, 1).getDay();
+        const lastDayOfMonth = new Date(year, month, daysInMonth).getDay();
+
+        // console.log(firstDayOfMonth); // DEBUG
 
         // console.log(new Date(year, month)); // DEBUG
         // console.log(new Date(year, month).toLocaleString); // DEBUG
@@ -44,8 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     });
                     dayCount++;
                 }
+                
+                row.appendChild(cell);
             }
+            calendarBody.appendChild(row);
         }
-
     }
 })
