@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     cell.textContent = dayCount;
                     cell.addEventListener('click', function () {
-                        alert('You clicked on ${year}-${month+1}-${dayCount}');
+                        alert(`You clicked on ${year}-${month+1}-${cell.textContent}`);
                     });
                     dayCount++;
                 }
