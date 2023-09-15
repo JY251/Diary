@@ -11,6 +11,28 @@
     <form action="/add_entry" method="POST">
       <label for="date">Date (YYYY-MM-DD):</label>
       <input type="date" id="date" name="date" required><br>
+      <!-- <button type="button" id="todayButton">Set to Today</button> -->
+
+      <!-- <script>
+        const dateInput = document.getElementById("date");
+        const todayButton = document.getElementById("toddayButton");
+
+        console.log(todayButton);
+        console.log(dateInput.value);
+
+        todayButton.addEventListener("click", function () {
+          const today = new Date();
+          console.log(today); // DEBUG
+          const year = today.getFullYear();
+          const month = String(today.getMonth()+1).padStart(2, "0");
+          const day = String(today.getDate()).padStart(2, "0");
+          const formattedDate = `${month}-${day}-${year}`;
+          // const formattedDate = `${year}-${month}-${day}`;
+          dateInput.value = formattedDate;
+        });
+      </script> -->
+
+      <br>
 
       <label for="entry">Diary Entry:</label><br>
       <textarea id="entry" name="entry" rows="4" cols="50" required></textarea><br>
@@ -18,10 +40,18 @@
       <button type="submit">Add Entry</button>
     </form>
 
+    <form method="POST" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+      <label for="date">Date:</label>
+      {[ form.date() ]}
+    </form>
+
     <h2>Diary Entries:</h2>
     <ul>
       {% for date, entry in entries|dictsort %}
       <p>{{ date }}: {{ entry }}</p>
+      {% if entry['image_url'] %}
+        <img src="{{ entry['image_src'] }}" alt="Image">
       {% endfor %}
     </ul>
   </body>
