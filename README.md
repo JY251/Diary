@@ -24,7 +24,8 @@
 - `new6`: run `new4` on flask server.  
 - `new7`: run `new4` on flask server and after clicking the date, it will print diary content in the alert dial box.  
 - `new8`: page transition. ~~Failed since `http://127.0.0.1:5000/newpage.html` does not exist when you run the server.~~
-- `new9`: add page transition on `new7`.
+- `new9`: add page transition on `new7`.  
+This does not work when you run app.py with not under current dir, such as `python new9/app.py` (when you are in the root directory of this repo.). You can run, but it fails to get the data in `diary_data` directory.
 
 # Test-Repo
 ## `popup`:
