@@ -16,15 +16,20 @@
 
 
 # Past trials
-`new`: use `fullcalendar` by setting src with URL
-`new2`: use `fullcalendar` by downloading the two URL files previously and put them to `lib` dir
-`new3`: use `fullcalendar` by installing node modules, followed the way of [GitHub Repo Page](https://github.com/fullcalendar/fullcalendar)
-`new4`: <u>__finished__</u> implementation of calendar part of calendar page, except for the position of calendar and menu bar etc.
-`new5`: integrate something
-`new6`: run `new4` on flask server.
-`new7`: run `new4` on flask server and after clicking the date, it will print diary content in the alert dial box.
+- `new`: use `fullcalendar` by setting src with URL  
+- `new2`: use `fullcalendar` by downloading the two URL files previously and put them to `lib` dir  
+- `new3`: use `fullcalendar` by installing node modules, followed the way of [GitHub Repo Page](https://github.com/fullcalendar/fullcalendar)  
+- `new4`: <u>__finished__</u> implementation of calendar part of calendar page, except for the position of calendar and menu bar etc.
+- `new5`: integrate something ?  
+- `new6`: run `new4` on flask server.  
+- `new7`: run `new4` on flask server and after clicking the date, it will print diary content in the alert dial box.  
+- `new8`: page transition. ~~Failed since `http://127.0.0.1:5000/newpage.html` does not exist when you run the server.~~
+- `new9`: add page transition on `new7`.
 
 # Test-Repo
+## `popup`:
+- test for implementing popup window
+
 ## `PageTrans`
 ### Versions:
 - `PageTrans`: read the `index2.html` in `div content`.

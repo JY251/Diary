@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Display Diary Data</title>
+  </head>
+  <body>
+    <h1>Diaray Data</h1>
+    <div id="diaryContent"></div>
+    <script>
+      const diaryData = JSON.parse(localStorage.getItem('diaryData'));
+
+      if (diaryData) {
+        const diaryContent = document.getElementById('diaryContent');
+        diaryContent.textContent = `Diary data for ${diaryData.date}:\n${diaryData.content}`;
+      }
+    </script>
+  </body>
+</html>

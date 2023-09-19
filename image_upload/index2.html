@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Image Upload Frame</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>Click the frame to upload an image:</p>
+    <div class="frame-container">
+      <iframe id="imageFrame" width="300" height="200"></iframe>
+      <button class="overlay-button" onclick="openFileInput()"></button>
+      <!-- <button sytle="positon: absolute; top:0, left 0; width: 100%; height: 100%; opacity: 0" onclick="openFileInput()"></button> -->
+    </div>
+    <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="displayImage()">
+  </body>
+  <script href="script.js"></script>
+</head>
