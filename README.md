@@ -31,6 +31,13 @@ This does not work when you run app.py with not under current dir, such as `pyth
 ## `popup`:
 - test for implementing popup window
 
+## `image_upload`
+- `image_upload`: not sure but failed => try again
+- `image_upload2`: page to upload image (`<input>`), but cannot display it.
+- `image_upload3`: page to upload and display image (but the image size is too large)
+- `image_upload4`: page to upload and display image; add css to set the image size 
+(`css` can be improved to set to max width/height rather than width or height directly.)
+
 ## `PageTrans`
 ### Versions:
 - `PageTrans`: read the `index2.html` in `div content`.
