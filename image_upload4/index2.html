@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width inital-scale=1.0">
+        <title>Image Upload Site</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="custom-file-input">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="displayImage()">
+            <img id="imageElement" src="" alt="Uploaded Image">
+            <br><br>
+            <button onclick="openFileInput()">Upload Image</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

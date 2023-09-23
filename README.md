@@ -37,6 +37,9 @@ This does not work when you run app.py with not under current dir, such as `pyth
 - `image_upload3`: page to upload and display image (but the image size is too large)
 - `image_upload4`: page to upload and display image; add css to set the image size 
 (`css` can be improved to set to max width/height rather than width or height directly.)
+- `image_upload5`: page to upload and display. Run with server but the image is not send to the server.   
+~~Not sure the image box is not displayed before an image is uploaded.~~  
+Not added the image box to display even the image is not loaded yet.
 
 ## `PageTrans`
 ### Versions:
