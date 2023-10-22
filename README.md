@@ -40,6 +40,7 @@ This does not work when you run app.py with not under current dir, such as `pyth
 - `image_upload5`: page to upload and display. Run with server but the image is not send to the server.   
 ~~Not sure the image box is not displayed before an image is uploaded.~~  
 Not added the image box to display even the image is not loaded yet.
+- `image_upload6`: copy of `image_upload6`. Aims to revise the code so that it will have an box for image even though the image is not loaded yet.
 
 ## `PageTrans`
 ### Versions:
